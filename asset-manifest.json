@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9bf93a1.css",
-    "main.js": "/static/js/main.c40ee98f.js",
-    "index.html": "/index.html",
-    "main.e9bf93a1.css.map": "/static/css/main.e9bf93a1.css.map",
-    "main.c40ee98f.js.map": "/static/js/main.c40ee98f.js.map"
+    "main.css": "/CarsApp/static/css/main.e9bf93a1.css",
+    "main.js": "/CarsApp/static/js/main.aa21ffaa.js",
+    "index.html": "/CarsApp/index.html",
+    "main.e9bf93a1.css.map": "/CarsApp/static/css/main.e9bf93a1.css.map",
+    "main.aa21ffaa.js.map": "/CarsApp/static/js/main.aa21ffaa.js.map"
   },
   "entrypoints": [
     "static/css/main.e9bf93a1.css",
-    "static/js/main.c40ee98f.js"
+    "static/js/main.aa21ffaa.js"
   ]
 }
