@@ -1,0 +1,10 @@
+.item-exit {
+  opacity: 1;
+
+  &-active {
+    opacity: 0;
+    transform: translateY(-50);
+    transition: opacity 1000ms, transform 1000ms;
+  }
+}
+

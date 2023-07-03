@@ -1,0 +1,10 @@
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.carInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
