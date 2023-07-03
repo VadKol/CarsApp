@@ -11,7 +11,6 @@ import '../../styles/CarItem.scss';
 import '../../styles/index.scss';
 import '../../styles/Pagination.scss';
 import '../../styles/transition.scss';
-import classNames from 'classnames';
 
 export const Cars: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -22,7 +21,10 @@ export const Cars: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [id, setId] = useState(0);
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(() => {
+    const storedPage = localStorage.getItem('currentPage');
+    return storedPage ? parseInt(storedPage, 10) : 0;
+  });
 
   const itemsPerPage = 5;
   const pageCount = Math.ceil(cars.length / itemsPerPage);
@@ -30,6 +32,10 @@ export const Cars: React.FC = () => {
   useEffect(() => {
     dispatch(carsActions.init());
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage.toString());
+  }, [currentPage]);
 
   const visibleCars = useMemo(() => {
     return cars.filter(car =>
@@ -99,7 +105,7 @@ export const Cars: React.FC = () => {
             margin="normal"
           />
         </div>
-        <div className='CarItem CarItem__header'>
+        <div className="CarItem CarItem__header">
           <span className="CarItem__infoWrapper is-italic">Name</span>
           <span className="CarItem__infoWrapper is-italic">Model</span>
           <span className="CarItem__infoWrapper is-italic">Color</span>
@@ -131,6 +137,7 @@ export const Cars: React.FC = () => {
           onPageChange={handlePageChange}
           containerClassName={'pagination'}
           activeClassName={'active'}
+          initialPage={currentPage}
         />
       </div>
 
