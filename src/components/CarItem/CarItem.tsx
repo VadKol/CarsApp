@@ -48,19 +48,17 @@ export const CarItem: React.FC<Props> = ({
       <span className="CarItem__infoWrapper is-size-4">{car}</span>
       <span className="CarItem__infoWrapper is-size-5">{car_model}</span>
       <span className="CarItem__infoWrapper is-size-5">
-			<CarColor classCarItem={'CarItem__color'} carColor={car_color} />
-				{car_color}
-			</span>
+        <CarColor classCarItem={'CarItem__color'} carColor={car_color} />
+        {car_color}
+      </span>
       <span className="CarItem__infoWrapper is-size-5">{car_model_year}</span>
       <span className="CarItem__infoWrapper is-size-7">{car_vin}</span>
       <span className="CarItem__infoWrapper is-size-5">{price}</span>
-      <span className="CarItem__infoWrapper is-size-5">{availability ? 'Available' : 'Not available'}</span>
+      <span className="CarItem__infoWrapper is-size-5">
+        {availability ? 'Available' : 'Not available'}
+      </span>
 
       <div className="CarItem__buttons">
-        <Link to={`/Cars/${id}`} className="button is-link is-contained mr-3">
-          Info
-        </Link>
-
         <Button
           type="submit"
           variant="contained"

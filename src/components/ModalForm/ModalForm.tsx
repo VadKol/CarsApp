@@ -1,9 +1,9 @@
+import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
+import Switch from '@mui/material/Switch';
 import React from 'react';
 import { CarType } from '../../types/Car';
 import { FormField } from '../FormField';
-import Switch from '@mui/material/Switch';
-import { Typography } from '@mui/material';
 
 type Props = {
   carItem?: CarType;
@@ -58,7 +58,7 @@ export const ModalForm: React.FC<Props> = ({
       return;
     }
 
-    setSelectedCar((prev) => ({
+    setSelectedCar(prev => ({
       ...prev,
       [e.target.name]: typeof value === 'string' ? value : +value,
     }));
@@ -75,7 +75,7 @@ export const ModalForm: React.FC<Props> = ({
   };
 
   const handleAvailabilityToggle = () => {
-    setSelectedCar((prev) => ({
+    setSelectedCar(prev => ({
       ...prev,
       availability: !prev.availability,
     }));
@@ -94,7 +94,7 @@ export const ModalForm: React.FC<Props> = ({
             onClick={() => handleClose(false)}
           />
         </header>
-        <form action="" onSubmit={(event) => handleSumbit(event, tempCar)}>
+        <form action="" onSubmit={event => handleSumbit(event, tempCar)}>
           <section className="modal-card-body">
             <FormField
               value={car}
@@ -147,7 +147,7 @@ export const ModalForm: React.FC<Props> = ({
 
             <div className="field">
               <div className="control is-flex is-align-items-center">
-              <Typography>Not available</Typography>
+                <Typography>Not available</Typography>
                 <Switch
                   checked={availability}
                   onChange={handleAvailabilityToggle}

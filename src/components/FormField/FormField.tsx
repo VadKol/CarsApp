@@ -20,7 +20,7 @@ export const FormField: React.FC<Props> = ({
   disabledVal,
 }) => (
   <div className="field">
-      <div className="control">
+    <div className="control">
       <TextField
         className={classNames(
           'input',
@@ -38,6 +38,6 @@ export const FormField: React.FC<Props> = ({
         margin="normal"
         required
       />
-      </div>
+    </div>
   </div>
 );
