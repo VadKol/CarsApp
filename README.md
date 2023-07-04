@@ -23,6 +23,7 @@ Node.JS version  `v18.16.0`
 Data fetched from [Link](https://myfakeapi.com/api/cars/)
 
 <hr />
+
 ## 🌐 Contact me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vadym-kolomiiets-ua/) 
 [![Telegram](https://img.shields.io/badge/-telegram-red?color=white&logo=telegram&logoColor=black)](https://t.me/vadymkol)
