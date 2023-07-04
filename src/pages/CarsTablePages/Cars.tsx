@@ -105,7 +105,7 @@ export const Cars: React.FC = () => {
             margin="normal"
           />
         </div>
-        <div className="CarItem CarItem__header">
+        <div className="CarItem CarItem__header mb-4">
           <span className="CarItem__infoWrapper is-italic">Name</span>
           <span className="CarItem__infoWrapper is-italic">Model</span>
           <span className="CarItem__infoWrapper is-italic">Color</span>
