@@ -48,7 +48,7 @@ export const CarItem: React.FC<Props> = ({
   };
 
   return (
-    <div className={classNames('CarItem', { 'is-italic': isEdited })}>
+    <div className={classNames('CarItem', { 'is-italic is-edited': isEdited })}>
       <span className="CarItem__infoWrapper is-size-4">{car}</span>
       <span className="CarItem__infoWrapper is-size-5">{car_model}</span>
       <span className="CarItem__infoWrapper is-size-5">
