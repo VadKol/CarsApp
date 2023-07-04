@@ -55,10 +55,10 @@ export const DeleteModal: React.FC<Props> = ({ id, handleIsDeleting }) => {
 						{`Year: ${car_model_year}`}
 					</p>
 					<p>
-						{`VIN: ${price}`}
+						{`VIN: ${car_vin}`}
 					</p>
 					<p>
-						{`Price: ${car_model}`}
+						{`Price: ${price}`}
 					</p>
 				</section>
 				<footer className="modal-card-foot">
