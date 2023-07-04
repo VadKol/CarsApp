@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { Delete as DeleteIcon, Edit as EditIcon } from '@mui/icons-material';
 import { Box, SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material';
-import { Edit as EditIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import classNames from 'classnames';
+import React, { useState } from 'react';
 
 import '../../styles/CarItem.scss';
 import { CarType } from '../../types/Car';
@@ -62,9 +62,15 @@ export const CarItem: React.FC<Props> = ({
         {availability ? 'Available' : 'Not available'}
       </span>
 
-      <Box sx={{ position: 'absolute', right: '10px', display: 'inline-block' }}>
+      <Box
+        sx={{
+          position: 'absolute',
+          zIndex: '1',
+          right: '10px',
+          display: 'inline-block',
+        }}
+      >
         <SpeedDial
-
           ariaLabel="Car actions"
           icon={<SpeedDialIcon />}
           open={isSpeedDialOpen}

@@ -5,11 +5,10 @@ import { Provider } from 'react-redux';
 import { HashRouter as Router } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import { App } from './App';
-import { store } from './redux/store';
-import { persistor } from './redux/store';
+import { persistor, store } from './redux/store';
 import './styles/index.scss';
 
-const Root = () => (
+const Root: React.FC = () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <Router>

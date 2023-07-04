@@ -3,6 +3,7 @@ import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import * as creaturesActions from '../../redux/slices/carsSlice';
 
+import { Button, Typography } from '@mui/material';
 import { CarType } from '../../types/Car';
 
 type Props = {
@@ -44,31 +45,32 @@ export const DeleteModal: React.FC<Props> = ({ id, handleIsDeleting }) => {
           />
         </header>
         <section className="modal-card-body">
-          <p>{`Name: ${car}`}</p>
-          <p>{`Model: ${car_model}`}</p>
-          <p>{`Color: ${car_color}`}</p>
-          <p>{`Year: ${car_model_year}`}</p>
-          <p>{`VIN: ${car_vin}`}</p>
-          <p>{`Price: ${price}`}</p>
+          <Typography>{`Name: ${car}`}</Typography>
+          <Typography>{`Model: ${car_model}`}</Typography>
+          <Typography>{`Color: ${car_color}`}</Typography>
+          <Typography>{`Year: ${car_model_year}`}</Typography>
+          <Typography>{`VIN: ${car_vin}`}</Typography>
+          <Typography>{`Price: ${price}`}</Typography>
         </section>
         <footer className="modal-card-foot">
-          <button
-            type="submit"
-            className="button is-danger is-outlined"
+          <Button
+            className="mr-5"
+            variant="contained"
+            color="error"
             onClick={() => {
               handleDelete(id);
               handleIsDeleting(false);
             }}
           >
             Delete
-          </button>
-          <button
-            type="submit"
-            className="button is-info is-outlined"
+          </Button>
+          <Button
+            variant="outlined"
+            color="info"
             onClick={() => handleIsDeleting(false)}
           >
             Cancel
-          </button>
+          </Button>
         </footer>
       </div>
     </div>

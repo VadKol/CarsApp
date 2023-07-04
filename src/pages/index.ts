@@ -1,2 +1,2 @@
 export * from './CarsTablePage';
-export * from './Home';
+export * from './Contacts';
