@@ -12,7 +12,7 @@ import '../../styles/index.scss';
 import '../../styles/Pagination.scss';
 import '../../styles/transition.scss';
 
-export const Cars: React.FC = () => {
+export const CarsTablePage: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const { cars, loading, error } = useAppSelector(state => state.cars);
