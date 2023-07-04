@@ -1,7 +1,8 @@
-import Button from '@mui/material/Button';
-import classNames from 'classnames';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Box, SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material';
+import { Edit as EditIcon, Delete as DeleteIcon } from '@mui/icons-material';
+import classNames from 'classnames';
+
 import '../../styles/CarItem.scss';
 import { CarType } from '../../types/Car';
 import { CarColor } from '../CarColor';
@@ -31,16 +32,19 @@ export const CarItem: React.FC<Props> = ({
   } = carItem;
 
   const [isEdited, setIsEdited] = useState(false);
+  const [isSpeedDialOpen, setIsSpeedDialOpen] = useState(false);
 
   const handleEdit = () => {
     setId(id);
     handleIsEditing(true);
     setIsEdited(true);
+    setIsSpeedDialOpen(false);
   };
 
   const handleDelete = () => {
     setId(id);
     handleIsDeleting(true);
+    setIsSpeedDialOpen(false);
   };
 
   return (
@@ -58,26 +62,30 @@ export const CarItem: React.FC<Props> = ({
         {availability ? 'Available' : 'Not available'}
       </span>
 
-      <div className="CarItem__buttons">
-        <Button
-          type="submit"
-          variant="contained"
-          color="info"
-          className="mr-3"
-          onClick={handleEdit}
-        >
-          Edit
-        </Button>
+      <Box sx={{ position: 'absolute', right: '10px', display: 'inline-block' }}>
+        <SpeedDial
 
-        <Button
-          type="submit"
-          variant="contained"
-          color="error"
-          onClick={handleDelete}
+          ariaLabel="Car actions"
+          icon={<SpeedDialIcon />}
+          open={isSpeedDialOpen}
+          onOpen={() => setIsSpeedDialOpen(true)}
+          onClose={() => setIsSpeedDialOpen(false)}
+          direction="left"
         >
-          Delete
-        </Button>
-      </div>
+          <SpeedDialAction
+            key="edit"
+            icon={<EditIcon />}
+            tooltipTitle="Edit"
+            onClick={handleEdit}
+          />
+          <SpeedDialAction
+            key="delete"
+            icon={<DeleteIcon />}
+            tooltipTitle="Delete"
+            onClick={handleDelete}
+          />
+        </SpeedDial>
+      </Box>
     </div>
   );
 };

@@ -113,7 +113,6 @@ export const CarsTablePage: React.FC = () => {
           <span className="CarItem__infoWrapper is-italic">VIN</span>
           <span className="CarItem__infoWrapper is-italic">Price</span>
           <span className="CarItem__infoWrapper is-italic">Availability</span>
-          <span className="CarItem__infoWrapper is-italic">Interface</span>
         </div>
 
         <TransitionGroup component="div" className="CarItem__wrapper">
