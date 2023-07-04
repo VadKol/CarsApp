@@ -1,6 +1,7 @@
 # CarsApp
+## [(Demo Link)](https://vadkol.github.io/CarsApp/)
 
-[This application (Demo Link)](https://vadkol.github.io/CarsApp/) is a page with a list of cars and provides a convenient way to manage this list. The app is designed to display, edit, delete, and add cars. It uses a table to represent the list of cars and provides the ability to search for cars using a search feature.
+This application is a page with a list of cars and provides a convenient way to manage this list. The app is designed to display, edit, delete, and add cars. It uses a table to represent the list of cars and provides the ability to search for cars using a search feature.
 
 
 <hr />
