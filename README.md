@@ -21,4 +21,8 @@ Node.JS version  `v18.16.0`
 <hr />
 
 Data fetched from [Link](https://myfakeapi.com/api/cars/)
-You can contact me via [Linkedin](https://www.linkedin.com/in/vadym-kolomiiets-ua/)
+
+<hr />
+## 🌐 Contact me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vadym-kolomiiets-ua/) 
+[![Telegram](https://img.shields.io/badge/-telegram-red?color=white&logo=telegram&logoColor=black)](https://t.me/vadymkol)
