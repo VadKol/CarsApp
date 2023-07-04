@@ -15,6 +15,14 @@ const initialState: CarsState = {
 };
 
 export const init = createAsyncThunk('cars/fetch', async () => {
+  const localData = window.localStorage.getItem('persist:root');
+
+  if (localData){
+    const persistWrapper = JSON.parse(localData);
+
+    return JSON.parse(persistWrapper.cars);
+  }
+
   const result = await fetchCars();
 
   return result;
