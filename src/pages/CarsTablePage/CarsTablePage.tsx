@@ -62,8 +62,8 @@ export const CarsTablePage: React.FC = () => {
   if (loading) {
     return (
       <Bars
-        height={80}
-        width={80}
+        height={40}
+        width={40}
         color="black"
         ariaLabel="Loading"
         visible={true}
@@ -106,13 +106,13 @@ export const CarsTablePage: React.FC = () => {
           />
         </div>
         <div className="CarItem CarItem__header mb-4">
-          <span className="CarItem__infoWrapper is-italic">Name</span>
-          <span className="CarItem__infoWrapper is-italic">Model</span>
-          <span className="CarItem__infoWrapper is-italic">Color</span>
-          <span className="CarItem__infoWrapper is-italic">Year</span>
-          <span className="CarItem__infoWrapper is-italic">VIN</span>
-          <span className="CarItem__infoWrapper is-italic">Price</span>
-          <span className="CarItem__infoWrapper is-italic">Availability</span>
+          <span className="CarItem__infoWrapper">Name</span>
+          <span className="CarItem__infoWrapper">Model</span>
+          <span className="CarItem__infoWrapper">Color</span>
+          <span className="CarItem__infoWrapper">Year</span>
+          <span className="CarItem__infoWrapper">VIN</span>
+          <span className="CarItem__infoWrapper">Price</span>
+          <span className="CarItem__infoWrapper">Availability</span>
         </div>
 
         <TransitionGroup component="div" className="CarItem__wrapper">
