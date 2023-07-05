@@ -146,8 +146,7 @@ export const ModalForm: React.FC<Props> = ({
               name="price"
             />
 
-            <div className="field">
-              <div className="control is-flex is-align-items-center">
+              <div className="control is-flex is-align-items-center mt-2">
                 <Typography>Not available</Typography>
                 <Switch
                   checked={availability}
@@ -155,7 +154,6 @@ export const ModalForm: React.FC<Props> = ({
                 />
                 <Typography>Available</Typography>
               </div>
-            </div>
           </section>
 
           <footer className="modal-card-foot">
